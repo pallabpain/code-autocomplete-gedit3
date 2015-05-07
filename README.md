@@ -46,9 +46,9 @@ to write a tabulator, hit a key like `Shift` or `Alt` and `Tab` afterwards.
 
 This plug-in current supports the following languages:
 
-1. C
-2. Python
-3. Ruby
+- C
+- Python
+- Ruby
 
 Support for more languages will be added soon along with other auto-completion features.
 
