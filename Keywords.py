@@ -29,7 +29,8 @@ c_list = c_keywords_list + c_stdio_list
 #------------------------------------------------------------------------------------------------
 # Python Keywords and Builtins
 #
-python_list = keyword.kwlist + dir(builtins) + ['self']
+builtins_list = [i for i in dir(builtins) if not (i.startswith('__') and i.endswith('__'))]
+python_list = keyword.kwlist + builtins_list + ['self']
 #
 # End of Python Keywords and Builtins
 #------------------------------------------------------------------------------------------------
