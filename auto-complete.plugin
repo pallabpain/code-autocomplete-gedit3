@@ -1,0 +1,11 @@
+[Plugin]
+Loader=python3
+Module=auto-complete
+IAge=3
+Name=Code Auto-Complete
+Description=Complete code by pressing TAB. Supports C, Python and Ruby.
+Authors=Pallab Pain<pallabkumarpain@gmail.com>
+Icon=gtk-go-forward-ltr
+Copyright=Copyright@2015 Pallab Pain
+Website=http://github.com/pallabpain
+Version=v1.1
