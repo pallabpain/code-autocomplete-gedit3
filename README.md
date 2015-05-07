@@ -51,3 +51,5 @@ This plug-in current supports the following languages:
 3. Ruby
 
 Support for more languages will be added soon along with other auto-completion features.
+
+If there are any issues, please let me know.
