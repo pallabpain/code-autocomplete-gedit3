@@ -5,10 +5,6 @@ code with ease and allow faster development.
 
 Parts of this plugin are based on the work of [Guillaume Chazarain](http://guichaz.free.fr/gedit-completion) 
 and [Elias Holzer](http://elias.hiex.at/gedit-plugins/)
-## Demonstration
-Click on the image to watch the video.
-
-[![Code Auto-complete](http://share.gifyoutube.com/mGdRZE.gif)](https://www.youtube.com/watch?v=S_VfnAkXAKs)
 
 ## Requirements
 
