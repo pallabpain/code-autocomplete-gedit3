@@ -7,7 +7,7 @@ Parts of this plugin are based on the work of [Guillaume Chazarain](http://guich
 and [Elias Holzer](http://elias.hiex.at/gedit-plugins/)
 ## Demonstration
 
-	[![Code Auto-complete](http://share.gifyoutube.com/mGdRZE.gif)](https://www.youtube.com/watch?v=S_VfnAkXAKs)
+[![Code Auto-complete](http://share.gifyoutube.com/mGdRZE.gif)](https://www.youtube.com/watch?v=S_VfnAkXAKs)
 
 ## Requirements
 
