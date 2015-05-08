@@ -24,9 +24,9 @@ The plug-in was developed and tested for *Gedit 3.10.4*
 
 			~/.local/share/gedit/plugins/
 			
-`~/` denotes your home folder. The `.local` folder is hidden by default. 
-You can unhide it by pressing `Ctrl + TAB`. The folder `gedit` may not 
-be present by default, so, you may have to create them.
+  `~/` denotes your home folder. The `.local` folder is hidden by default. 
+  You can unhide it by pressing `Ctrl + H`. The folder `gedit` may not 
+  be present by default, so, you may have to create them.
 
 - Enable the plug-in from the gedit menu: *Edit -> Preferences -> Plugins*
 
