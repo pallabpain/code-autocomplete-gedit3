@@ -6,7 +6,8 @@ code with ease and allow faster development.
 Parts of this plugin are based on the work of [Guillaume Chazarain](http://guichaz.free.fr/gedit-completion) 
 and [Elias Holzer](http://elias.hiex.at/gedit-plugins/)
 ## Demonstration
-[![Code Auto-complete Plug-in for Gedit 3] (dl.dropboxusercontent.com/u/81256407/autocomplete.gif)](https://www.youtube.com/watch?v=S_VfnAkXAKs)]
+[![Code Auto-complete](https://www.dropbox.com/s/r7aesiivyljcavk/autocomplete.gif?dl=0)](https://www.youtube.com/watch?v=ek1j272iAmc)
+
 ## Requirements
 
 The plugin requires `exuberant-ctags` to be installed on the system.
