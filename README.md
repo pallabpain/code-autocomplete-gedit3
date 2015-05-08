@@ -40,7 +40,7 @@ written in your text and hit `TAB`. If there are more possibilities hit
 Press `Ctrl + TAB` to iterate backwards in the case you you've gone too far.
  
 If you cycled through a few words, found the one you were looking for and want
-to write a tabulator, hit a key like `Shift` or `Alt` and `Tab` afterwards.
+to write a tabulator, hit a key like <kbd>Shift</kbd> or `Alt` and `Tab` afterwards.
 
 ## Languages Supported
 
