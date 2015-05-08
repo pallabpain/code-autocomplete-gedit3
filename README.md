@@ -34,7 +34,7 @@ The plug-in was developed and tested for *Gedit 3.10.4*
 
 This plug-in allows you to use auto completion like you're used to it in any
 unix console. Write the first few characters of a word you've already
-written in your text and hit <kbd>Tab</kbd>. If there are more possibilities hit
+written in your text and hit <kbd>Tab+Ctrl</kbd>. If there are more possibilities hit
 <kbd>Tab</kbd> more times to go through the results.
  
 Press <kbd>Ctrl</kbd>+<kbd>Tab</kbd> to iterate backwards in the case you you've gone too far.
