@@ -94,10 +94,11 @@ ruby_list = keywords + constants + error + reserved_words
 #
 # Snippets
 C_STYLES = 	{	'if'	: '() {}', 
-				'else' 	: '{ }', 
-				'while' : '() { }',
-				'for'	: '( ; ; ) { }', 
-				'do' 	: '{ }while();', 
-				'switch': '() { }'			
+				'else' 	: '{}', 
+				'while' : '() {}',
+				'for'	: '( ; ; ) {}', 
+				'do' 	: '{}while();', 
+				'switch': '() {}',
+				'main'	: '() {\n}'			
 			}
 
