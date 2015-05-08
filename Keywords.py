@@ -10,7 +10,8 @@ c_keywords_list = ['auto', 'break', 'case', 'char', 'const', 'continue',
 				'float', 'for', 'goto', 'if', 'int', 'long', 'register',
 				'return', 'short', 'signed', 'sizeof', 'static', 'struct',
 				'switch', 'typedef', 'union', 'unsigned', 'void', 'volatile',
-				'while', 'include', 'define', 'main']
+				'while', 'include', 'define', 'main', 'ifndef', 'undef',
+				'ifdef', 'elif', 'endif', 'pragma', 'error']
 
 c_stdio_list =['clearerr', 'fclose', 'fdopen', 'feof', 'ferror', 'fflush',
 			'fgetc', 'fgetpos', 'fgets', 'fileno', 'fopen', 'fprintf', 
@@ -90,4 +91,13 @@ ruby_list = keywords + constants + error + reserved_words
 #
 # End of Ruby Reserved Words
 #------------------------------------------------------------------------------------------------
+#
+# Snippets
+C_STYLES = 	{	'if'	: '() {}', 
+				'else' 	: '{ }', 
+				'while' : '() { }',
+				'for'	: '( ; ; ) { }', 
+				'do' 	: '{ }while();', 
+				'switch': '() { }'			
+			}
 

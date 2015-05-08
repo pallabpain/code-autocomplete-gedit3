@@ -122,14 +122,17 @@ class AutoCompletePlugin(GObject.Object, Gedit.WindowActivatable):
 			cmd_end += headers
 			cmd_middle = ['--c-kinds=+dflmpstuv']
 			keyword_list = Keywords.c_list
+		
 		elif (doc_name.endswith('.py')):
 			self.do_set_flag('python')
 			cmd_middle = ['--python-kinds=+cfmvi']
 			keyword_list = Keywords.python_list
+		
 		elif (doc_name.endswith('.rb') or doc_name.endswith('.ruby')):
 			self.do_set_flag('ruby')
 			cmd_middle = ['--ruby-kinds=+cfmF']
 			keyword_list = Keywords.ruby_list
+		
 		else:
 			return False
 		
@@ -153,6 +156,8 @@ class AutoCompletePlugin(GObject.Object, Gedit.WindowActivatable):
 		self.loop = False
 		self.words = []
 		self.word_index = 0
+		self.snippet_inserted = False
+		self.new_iter = None
 		
 	def do_complete_word(self, view, event):
 		''' This method is responsible for cycling through the list of
@@ -162,7 +167,10 @@ class AutoCompletePlugin(GObject.Object, Gedit.WindowActivatable):
 					and (event.keyval == Gdk.keyval_from_name('Tab'))):
 			
 			buffer = view.get_buffer()
-			cursor_iter = buffer.get_iter_at_mark(buffer.get_insert())
+			if (not self.snippet_inserted):
+				cursor_iter = buffer.get_iter_at_mark(buffer.get_insert())
+			else:
+				cursor_iter = self.new_iter
 			line_iter = cursor_iter.copy()
 			word_iter = cursor_iter.copy()
 			line_iter.set_line_offset(0)
@@ -178,7 +186,7 @@ class AutoCompletePlugin(GObject.Object, Gedit.WindowActivatable):
 				self.line_index = cursor_iter.get_line_index() - len(word)
 				word_list = self.do_get_list()
 				self.words = [w for w in word_list if(w.startswith(word) 
-															and (w != word))]
+								and (w != word))]
 				self.words.sort()
 				self.words.append(word)
 			
@@ -194,6 +202,8 @@ class AutoCompletePlugin(GObject.Object, Gedit.WindowActivatable):
 				word_iter.set_line_index(self.line_index)
 				buffer.delete(word_iter, cursor_iter)
 				buffer.insert_at_cursor(self.words[self.word_index])
+				inserted_word = self.words[self.word_index]
+				self.snippet_inserted = self.insert_snippet(inserted_word, buffer)
 				self.loop = True
 				return True
 			else:
@@ -202,4 +212,19 @@ class AutoCompletePlugin(GObject.Object, Gedit.WindowActivatable):
 		else:
 			self.do_reset()
 			return False
-			
+
+	def insert_snippet(self, word, buffer):
+		if (self.flags['c']):
+			if (word in Keywords.C_STYLES.keys()):
+				buffer.insert_at_cursor(Keywords.C_STYLES[word])
+				style_len = len(Keywords.C_STYLES[word])
+				cursor_iter = buffer.get_iter_at_mark(buffer.get_insert())
+				iter_copy = cursor_iter.copy()
+				cursor_iter.backward_chars(style_len - 1)
+				buffer.place_cursor(cursor_iter)
+				self.new_iter = iter_copy
+				return True
+			else:
+				return False
+		elif (self.flags['python']):
+			return False				
