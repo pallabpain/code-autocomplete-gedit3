@@ -6,7 +6,7 @@ code with ease and allow faster development.
 Parts of this plugin are based on the work of [Guillaume Chazarain](http://guichaz.free.fr/gedit-completion) 
 and [Elias Holzer](http://elias.hiex.at/gedit-plugins/)
 ## Demonstration
-[![Code Auto-complete](https://www.dropbox.com/s/r7aesiivyljcavk/autocomplete.gif?dl=0)](https://www.youtube.com/watch?v=ek1j272iAmc)
+[![Code Auto-complete](www.dropbox.com/s/r7aesiivyljcavk/autocomplete.gif?dl=0)](https://www.youtube.com/watch?v=ek1j272iAmc)
 
 ## Requirements
 
