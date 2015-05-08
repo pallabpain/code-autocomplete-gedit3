@@ -25,7 +25,7 @@ The plug-in was developed and tested for *Gedit 3.10.4*
 			~/.local/share/gedit/plugins/
 			
   `~/` denotes your home folder. The `.local` folder is hidden by default. 
-  You can unhide it by pressing `Ctrl + H`. The folder `gedit` may not 
+  You can unhide it by pressing kbd>Ctrl</kbd>+<kbd>H</kbd>. The folder `gedit` may not 
   be present by default, so, you may have to create it.
 
 - Enable the plug-in from the gedit menu: ***Edit -> Preferences -> Plugins***
@@ -34,13 +34,13 @@ The plug-in was developed and tested for *Gedit 3.10.4*
 
 This plug-in allows you to use auto completion like you're used to it in any
 unix console. Write the first few characters of a word you've already
-written in your text and hit `TAB`. If there are more possibilities hit
-`Tab` more times to go through the results.
+written in your text and hit <kbd>Tab</kbd>. If there are more possibilities hit
+<kbd>Tab</kbd> more times to go through the results.
  
-Press `Ctrl + TAB` to iterate backwards in the case you you've gone too far.
+Press <kbd>Ctrl</kbd>+<kbd>Tab</kbd> to iterate backwards in the case you you've gone too far.
  
 If you cycled through a few words, found the one you were looking for and want
-to write a tabulator, hit a key like <kbd>Shift</kbd> or `Alt` and `Tab` afterwards.
+to write a tabulator, hit a key like <kbd>Shift</kbd> or <kbd>Alt</kbd> and <kbd>Tab</kbd> afterwards.
 
 ## Languages Supported
 
