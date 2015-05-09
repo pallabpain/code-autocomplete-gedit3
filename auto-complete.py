@@ -27,18 +27,18 @@ import subprocess
 SEPARATORS = re.escape("&\"'{([-|`)]} .,;:!?/^$\n\r*+#=<>	")
 
 KEY_PAIRS = { 	Gdk.KEY_parenleft :  Gdk.KEY_parenright,
-		Gdk.KEY_bracketleft : Gdk.KEY_bracketright,
-		Gdk.KEY_braceleft : Gdk.KEY_braceright, 
-		Gdk.KEY_quotedbl : Gdk.KEY_quotedbl,
-		Gdk.KEY_quoteright : Gdk.KEY_quoteright
-	    }
+				Gdk.KEY_bracketleft : Gdk.KEY_bracketright,
+			 	Gdk.KEY_braceleft : Gdk.KEY_braceright, 
+			 	Gdk.KEY_quotedbl : Gdk.KEY_quotedbl,
+			 	Gdk.KEY_quoteright : Gdk.KEY_quoteright
+			}
 
 KEY_ASCII = { 	Gdk.KEY_parenright : ')',
-		Gdk.KEY_braceright : '}',
-		Gdk.KEY_bracketright : ']',
-		Gdk.KEY_quotedbl : '"',
-		Gdk.KEY_quoteright : "'"
-	    }
+			  	Gdk.KEY_braceright : '}',
+			  	Gdk.KEY_bracketright : ']',
+			  	Gdk.KEY_quotedbl : '"',
+			  	Gdk.KEY_quoteright : "'"
+			}
 			
 class AutoCompletePlugin(GObject.Object, Gedit.WindowActivatable):
 	__gtype_name__ = "AutoComplete"
@@ -114,7 +114,10 @@ class AutoCompletePlugin(GObject.Object, Gedit.WindowActivatable):
 	def do_get_list(self, doc_uri):
 		#Generates tag file and returns a list comprising of tags 
 		# extracted from the tag file and language specific keywords.
-		os.chdir(self.working_directory) # Change current working direcotry	
+
+		# Change current working direcotry
+		os.chdir(self.working_directory)	
+		
 		cmd_start = ['ctags', '--fields=k']
 		cmd_mid = []
 		cmd_end = ['-f', '.tags', doc_uri]
@@ -162,6 +165,7 @@ class AutoCompletePlugin(GObject.Object, Gedit.WindowActivatable):
 	def do_complete_word(self, view, event):
 		# This method is responsible for cycling through the list of
 		# completion words when <TAB> is pressed and displaying them
+		
 		document = self.window.get_active_document() # Get the active document
 		if (document.is_untitled()): # If the document is untitled then exit
 			return False
@@ -179,6 +183,7 @@ class AutoCompletePlugin(GObject.Object, Gedit.WindowActivatable):
 			return False # Language not supported
 		
 		if((event.type == Gdk.EventType.KEY_PRESS) and (event.keyval == Gdk.keyval_from_name('Tab'))):
+			
 			buffer = view.get_buffer() # Get the text buffer for the current view
 			
 			if (not self.snippet_inserted):
@@ -247,7 +252,6 @@ class AutoCompletePlugin(GObject.Object, Gedit.WindowActivatable):
 				buffer.delete(word_iter, cursor_iter) # Delete that word
 				buffer.insert_at_cursor(self.words[self.word_index][0]) # Insert word from list into the buffer
 				inserted_word = self.words[self.word_index]
-				
 				# Insert snippet (if possible)
 				self.snippet_inserted = self.insert_snippet(inserted_word, buffer)
 				self.loop = True
@@ -262,6 +266,7 @@ class AutoCompletePlugin(GObject.Object, Gedit.WindowActivatable):
 			# If a key other than Tab is pressed
 			self.do_reset()
 			buffer = view.get_buffer()
+			
 			if (event.keyval in KEY_PAIRS):
 				# If [, {, (, " or ' is pressed then
 				# complete the pair
@@ -270,7 +275,8 @@ class AutoCompletePlugin(GObject.Object, Gedit.WindowActivatable):
 				cursor_iter = buffer.get_iter_at_mark(buffer.get_insert())
 				cursor_iter.backward_chars(1)
 				buffer.place_cursor(cursor_iter)
-			return True
+				
+			return False
 
 	def insert_snippet(self, word, buffer):
 		# Inserts code-snippets
@@ -325,4 +331,5 @@ class AutoCompletePlugin(GObject.Object, Gedit.WindowActivatable):
 			ch = line_iter.get_char()
 		s = start.get_slice(line_iter)
 		return s
-		
+			
+				
