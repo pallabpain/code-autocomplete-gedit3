@@ -20,7 +20,7 @@ The plug-in was developed and tested for *Gedit 3.10.4*
 
 - Download the files on your computer
 
-- Copy the files `auto-complete.plugin`, `auto-complete.py` and `Keywords.py` in the following folder:
+- Copy the files `auto-complete.plugin`, `auto-complete.py` and `helper.py` in the following folder:
 
 			~/.local/share/gedit/plugins/
 			
