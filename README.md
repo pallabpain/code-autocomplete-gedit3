@@ -6,6 +6,12 @@ code with ease and allow faster development.
 Parts of this plugin are based on the work of [Guillaume Chazarain](http://guichaz.free.fr/gedit-completion) 
 and [Elias Holzer](http://elias.hiex.at/gedit-plugins/)
 
+## Demonstration
+
+[![Demo 1](http://share.gifyoutube.com/vOg9jp.gif)]
+
+[![Demo 2](http://share.gifyoutube.com/vbqwAq.gif)]
+
 ## Requirements
 
 The plugin requires `exuberant-ctags` to be installed on the system.
