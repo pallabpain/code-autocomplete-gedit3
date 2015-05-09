@@ -8,9 +8,9 @@ and [Elias Holzer](http://elias.hiex.at/gedit-plugins/)
 
 ## Demonstration
 
-[Demo 1](http://share.gifyoutube.com/vOg9jp.gif)
+![Demo 1](http://share.gifyoutube.com/vOg9jp.gif)
 
-[Demo 2](http://share.gifyoutube.com/vbqwAq.gif)
+![Demo 2](http://share.gifyoutube.com/vbqwAq.gif)
 
 ## Requirements
 
