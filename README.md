@@ -38,15 +38,11 @@ The plug-in was developed and tested for *Gedit 3.10.4*
 
 ## Usage
 
-This plug-in allows you to use auto completion like you're used to it in any
-unix console. Write the first few characters of a word you've already
-written in your text and hit <kbd>Tab</kbd>. If there are more possibilities hit
-<kbd>Tab</kbd> more times to go through the results.
+This plug-in allows you to use auto completion like you're used to it in any unix console. Write the first few characters of a word you've already written in your text and hit <kbd>Tab</kbd>. If there are more possibilities hit <kbd>Tab</kbd> more times to go through the results.
  
 Press <kbd>Ctrl</kbd>+<kbd>Tab</kbd> to iterate backwards in the case you you've gone too far.
  
-If you cycled through a few words, found the one you were looking for and want
-to write a tabulator, hit a key like <kbd>Shift</kbd> or <kbd>Alt</kbd> and <kbd>Tab</kbd> afterwards.
+If you cycled through a few words, found the one you were looking for and want to write a tabulator, hit a key like <kbd>Shift</kbd> or <kbd>Alt</kbd> and <kbd>Tab</kbd> afterwards.
 
 ## Languages Supported
 
