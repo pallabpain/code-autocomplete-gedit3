@@ -27,18 +27,18 @@ import subprocess
 SEPARATORS = re.escape("&\"'{([-|`)]} .,;:!?/^$\n\r*+#=<>	")
 
 KEY_PAIRS = { 	Gdk.KEY_parenleft :  Gdk.KEY_parenright,
-				Gdk.KEY_bracketleft : Gdk.KEY_bracketright,
-			 	Gdk.KEY_braceleft : Gdk.KEY_braceright, 
-			 	Gdk.KEY_quotedbl : Gdk.KEY_quotedbl,
-			 	Gdk.KEY_quoteright : Gdk.KEY_quoteright
-			}
+		Gdk.KEY_bracketleft : Gdk.KEY_bracketright,
+		Gdk.KEY_braceleft : Gdk.KEY_braceright, 
+		Gdk.KEY_quotedbl : Gdk.KEY_quotedbl,
+		Gdk.KEY_quoteright : Gdk.KEY_quoteright
+	    }
 
 KEY_ASCII = { 	Gdk.KEY_parenright : ')',
-			  	Gdk.KEY_braceright : '}',
-			  	Gdk.KEY_bracketright : ']',
-			  	Gdk.KEY_quotedbl : '"',
-			  	Gdk.KEY_quoteright : "'"
-			}
+		Gdk.KEY_braceright : '}',
+		Gdk.KEY_bracketright : ']',
+		Gdk.KEY_quotedbl : '"',
+		Gdk.KEY_quoteright : "'"
+	    }
 			
 class AutoCompletePlugin(GObject.Object, Gedit.WindowActivatable):
 	__gtype_name__ = "AutoComplete"
