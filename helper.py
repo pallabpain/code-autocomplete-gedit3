@@ -94,13 +94,24 @@ ruby_list = r_keywords + r_constants + r_error + r_reserved_words
 #------------------------------------------------------------------------------------------------
 #
 # Snippets
-C_STYLES = 	{	'if'	: ['() {','}'], 
-				'else' 	: ['{', '}'], 
-				'while' : ['() {', '}'],
-				'for'	: ['( ; ; ) {', '}'], 
-				'do' 	: ['{', '}while();'], 
-				'switch': ['() {', '}'],
-				'main'	: ['() {', '}']		
+C_STYLES = 	{	'if'	: ('() {','}', True), 
+				'else' 	: ('{', '}', True), 
+				'while' : ('() {', '}', True),
+				'for'	: ('( ; ; ) {', '}', True), 
+				'do' 	: ('{', '}while();', True), 
+				'switch': ('() {', '}', True),
+				'main'	: ('() {', '}', True),
+				'struct' : (' {', '};', True)		
+			}
+			
+PY_STYLES = { 	'if' 	: ('()', ':', False),
+				'else'	: (':', '', False),
+				'elif'	: ('()', ':', False),
+				'try' 	: (':', 'except:', True),
+				'while' : ('()', ':', False),
+				'for'	: ('()', ':', False),
+				'def'	: (' ()', ':', False),
+				'class' : (' :', '\tdef __init__(self):', True)
 			}
 #
 #
