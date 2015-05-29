@@ -39,7 +39,7 @@ If you cycled through a few words, found the one you were looking for and want t
 
 This plug-in also allows you to insert C and Python snippets in your code. Simply type the keyword e.g. *while* and press <kbd>Ctrl + Space</kbd>
 
-Pair Character completion is also supported (e.g. (), {}, [], '', "")
+Pair Character completion is also supported (e.g. ( ), { }, [ ], ' ', " ")
 
 - <kbd>Tab</kbd> : Cycle through matches
 - <kbd>Ctrl + Space</kbd> (when the cursor is at the end of a keyword) : Insert Snippet
